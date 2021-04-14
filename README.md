@@ -1,2 +1,2 @@
-# njs-mar21
-Practice Repository for Next.js of March 2021
+# prac-1
+Practice Repository for Next.js - 2021
