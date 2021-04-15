@@ -1,0 +1,19 @@
+{
+  "name": "prac-1",
+  "version": "0.0.0",
+  "description": "Practice Repository for Next.js - 2021",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dark-swordsman/prac-1.git"
+  },
+  "author": "Kyle Barr",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/dark-swordsman/prac-1/issues"
+  },
+  "homepage": "https://github.com/dark-swordsman/prac-1#readme"
+}
