@@ -6,3 +6,4 @@ Practice Repository for Next.js - 2021
 - JWT Tokens: https://jwt.io/
 - Iron Sessions: https://github.com/vvo/next-iron-session
 - Tokens: https://github.com/nextauthjs/next-auth-example
+- NextJS docs: https://nextjs.org/docs
