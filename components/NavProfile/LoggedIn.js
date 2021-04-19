@@ -1,8 +1,8 @@
 import { useState, useRef } from 'react';
 
-import { useOutsideAlerter } from '../helpers';
+import { useOutsideAlerter } from '../../helpers';
 
-function NavProfile() {
+function LoggedIn() {
   const [dropdown, setDropdown] = useState(false);
 
   const dropdownItems = [
@@ -58,4 +58,4 @@ function NavProfile() {
   );
 }
 
-export default NavProfile;
+export default LoggedIn;

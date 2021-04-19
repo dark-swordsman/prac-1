@@ -1,6 +1,8 @@
 import Header from './Header';
 import Layout from './Layout';
-import NavProfile from './NavProfile';
+import {
+  NavProfile
+} from './NavProfile';
 
 export {
   Header,
