@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 function NavProfile() {
   return (
     <div class="flex items-center h-full px-4 justify-between cursor-pointer select-none hover:bg-gray-800">
