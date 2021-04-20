@@ -1,6 +1,5 @@
-import Head from 'next/head'
-
 import { 
+  CustomHead,
   Header,
   Layout,
 } from '../components';
@@ -8,12 +7,10 @@ import {
 function Home() {
   return (
     <Layout>
-      <Head>
-        <title>Some Anime List Site</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+      <CustomHead title="Home" />
       <Header />
+
+
     </Layout>
   );
 }
