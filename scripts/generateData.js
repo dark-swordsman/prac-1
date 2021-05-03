@@ -4,6 +4,8 @@
   - create a basic array of values per property
   - loop X times and math.random() each property
 */
+const startTime = Date.now();
+const dataRows = (process.argv.slice(2))[0];
 
 const fs = require('fs');
 
@@ -108,8 +110,8 @@ function generateGenres() {
 }
 
 (async () => {
-
-  while (index < 40) {
+  // default to 50 dataRows if not specific on command line
+  while (index < (dataRows || 50)) {
     const { name, type } = availableValues;
 
     const compiledData = await {
@@ -129,4 +131,6 @@ function generateGenres() {
   const finalData = JSON.stringify(data, null, "\t");
   
   fs.writeFileSync(`dataDump/anime-data-${(new Date()).toISOString()}.json`, finalData);
+
+  console.log(`Run time: ${Date.now() - startTime} ms`);
 })();
