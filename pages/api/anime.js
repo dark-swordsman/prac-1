@@ -1,6 +1,6 @@
 // TODO: Possibly pull in data generation script to emulate SWR?
 // const fs = require('fs');
-let animeData = {
+const animeData = {
 	"anime": [
 		{
 			"name": "Gintama",
