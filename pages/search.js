@@ -5,6 +5,7 @@ import {
   CustomHead,
   Header,
   Layout,
+  SearchBar,
 } from "../components";
 
 function Search() {
@@ -43,6 +44,8 @@ function Search() {
         table
 
       */}
+
+      <SearchBar />
 
       <button onClick={() => setSortDirection(sortDirection === "ASC" ? "DESC" : "ASC")}>press me</button>
 
