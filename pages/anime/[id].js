@@ -1,28 +1,44 @@
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
+import useSWR from 'swr';
 
 import {
   CustomHead,
   Header,
   Layout,
-} from '../../components';
+} from "../../components";
+
+function Image(anime) {
+  if (!anime) {
+    return "loading...";
+  } else {
+    return <img src={anime.image} />
+  }
+}
+
+function MainBody(anime) {
+
+}
 
 function Anime() {
   const router = useRouter();
   const { id } = router.query;
 
-  const data = [
-    "aaaaa",
-    "bbbbbbbbbbb bbbb bbbbbbbbbbb bbbb bbbbbbbbbbb bbbb bbbbbbbbbbb bbbb bbbbbbbbbbb bbbb bbbbbbbbbbb bbbb bbbbbbbbbbb bbbb bbbbbbbbbbb bbbb bbbbbbbbbbb bbbb bbbbbbbbbbb bbbb "
-  ];
+  const { data, error } = useSWR("/api/anime");
+  if (error) console.error(error);
+  const anime = !data ? null : data.anime[id];
 
   return (
     <Layout>
-      <CustomHead title={id} />
+      <CustomHead title={anime ? anime.name : "loading..."} />
       <Header />
 
-      <div className="flex">
-        <div className="w-56 md:w-64 bg-pink-500">{data[0]}</div>
-        <div className="flex-1 bg-blue-500">{data[1]}</div>
+      <div className="flex mt-8">
+        <div className="w-56 md:w-64">
+          {Image(anime)}
+        </div>
+        <div className="flex-1">
+          {MainBody(anime)}
+        </div>
       </div>
     </Layout>
   );
