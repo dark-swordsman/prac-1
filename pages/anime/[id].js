@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import useSWR from 'swr';
+import { useEffect, useState } from 'react';
 
 import {
   CustomHead,
@@ -40,12 +41,15 @@ function MainBody(anime) {
 }
 
 function Anime() {
-  const router = useRouter();
-  const { id } = router.query;
-  // refactor in future to use SSR (create interface methods like an API I guess???)
+  const { query: { id } } = useRouter();
   const { data, error } = useSWR("/api/anime");
-  if (error) console.error(error);
-  const anime = !data ? null : data.anime[id];
+  
+  if (error) return <div>failed</div>;
+  if (!data) return <div>loading...</div>;
+
+  const anime = data.anime[id];
+
+  if (!anime) return <div>anime not found</div>;
 
   return (
     <Layout>

@@ -872,11 +872,5 @@ const animeData = {
 // }
 
 export default function handler(req, res) {
-  if (!animeData) {
-    getAnimeData().then((data) => {
-      res.status(200).json(data);
-    });
-  } else {
-    res.status(200).json(animeData);
-  }
+	res.status(200).json(animeData);
 }
