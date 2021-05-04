@@ -2,7 +2,7 @@ import {
   CustomHead,
   Header,
   Layout,
-} from '../components';
+} from "../components";
 
 function Home() {
   return (
