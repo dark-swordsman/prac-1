@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import useSWR from 'swr';
 
 import {
+  AnimeContainer,
   CustomHead,
   Header,
   Layout,
@@ -49,7 +50,9 @@ function Search() {
 
       <button onClick={() => setSortDirection(sortDirection === "ASC" ? "DESC" : "ASC")}>press me</button>
 
-      {sorted && sorted.map((anime, i) => <div key={`${anime.name}-${i}`}>{anime.name}</div>)}
+      <div className="flex flex-wrap justify-center">
+        {sorted && sorted.map((anime, i) => <AnimeContainer anime={anime} key={`${anime.name}-${i}`} />)}
+      </div>
 
     </Layout>
   )
