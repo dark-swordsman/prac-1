@@ -872,5 +872,13 @@ const animeData = {
 // }
 
 export default function handler(req, res) {
-	res.status(200).json(animeData);
+	new Promise((resolve, reject) => {
+		resolve({ 
+			anime: (animeData.anime.map((data, i) => {
+				return {...data, id: i}
+			}))
+		});
+	})
+	.then((compiledData) => res.status(200).json(compiledData))
+	
 }
