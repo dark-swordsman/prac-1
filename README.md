@@ -1,6 +1,8 @@
 # prac-1
 A personal practice repository for me to get caught up on Next.js - 2021
 
+It features an anime catalog website similar to [MyAnimeList](https://myanimelist.net/), [Anilist](https://anilist.co/), or [Kitsu](https://kitsu.io/explore/anime).
+
 ### Resources
 
 - JWT Tokens: https://jwt.io/
