@@ -1,5 +1,5 @@
 # prac-1
-Practice Repository for Next.js - 2021
+A personal practice repository for me to get caught up on Next.js - 2021
 
 ### Resources
 
